@@ -1,4 +1,4 @@
-### DPS907 and WSA500 for the Fall 2014 semester
+### DPS907 and WSA500 for the Fall 2015 semester
 
 **Code examples**
 
