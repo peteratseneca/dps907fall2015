@@ -15,11 +15,38 @@ namespace AssociationsIntro.Controllers
         // GET: api/Vehicles
         public IHttpActionResult Get()
         {
+            return Ok(m.GetAllVehicles());
+        }
+
+        // GET: api/Vehicles/WithManufacturer
+        [Route("api/vehicles/withmanufacturer")]
+        public IHttpActionResult GetWithManufacturer()
+        {
             return Ok(m.GetAllVehWithManufacturer());
         }
 
         // GET: api/Vehicles/5
         public IHttpActionResult Get(int? id)
+        {
+            // Determine whether we can continue
+            if (!id.HasValue) { return NotFound(); }
+
+            // Fetch the object, so that we can inspect its value
+            var fetchedObject = m.GetOneVehicleById(id.Value);
+
+            if (fetchedObject == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(fetchedObject);
+            }
+        }
+
+        // GET: api/Vehicles/5
+        [Route("api/vehicles/{id}/withmanufacturer")]
+        public IHttpActionResult GetWithManufacturer(int? id)
         {
             // Determine whether we can continue
             if (!id.HasValue) { return NotFound(); }

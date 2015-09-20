@@ -21,6 +21,14 @@ namespace AssociationsIntro.Controllers
 
         // Add methods for the data service operations
 
+        // All manufacturers
+        public IEnumerable<ManufacturerBase> GetAllManufacturers()
+        {
+            var fetchedObjects = ds.Manufacturers.OrderBy(man => man.Name);
+
+            return Mapper.Map<IEnumerable<ManufacturerBase>>(fetchedObjects);
+        }
+
         // All manufacturers with their vehicles
         public IEnumerable<ManufacturerWithVehicles> GetAllMfrWithVehicles()
         {
@@ -28,6 +36,14 @@ namespace AssociationsIntro.Controllers
             var fetchedObjects = ds.Manufacturers.Include("Vehicles").OrderBy(man => man.Name);
 
             return Mapper.Map<IEnumerable<ManufacturerWithVehicles>>(fetchedObjects);
+        }
+
+        // One manufacturer
+        public ManufacturerBase GetOneManufacturerById(int id)
+        {
+            var fetchedObject = ds.Manufacturers.Find(id);
+
+            return (fetchedObject == null) ? null : Mapper.Map<ManufacturerBase>(fetchedObject);
         }
 
         // One manufacturer with its vehicles
@@ -39,6 +55,16 @@ namespace AssociationsIntro.Controllers
             return (fetchedObject == null) ? null : Mapper.Map<ManufacturerWithVehicles>(fetchedObject);
         }
 
+        // All vehicles
+        public IEnumerable<VehicleBase> GetAllVehicles()
+        {
+            // Note that we must .Include("Manufacturer") to fetch the associated object
+            // so that the mapping operation can write the ManufacturerId property
+            var fetchedObjects = ds.Vehicles.Include("Manufacturer").OrderBy(veh => veh.Model);
+
+            return Mapper.Map<IEnumerable<VehicleBase>>(fetchedObjects);
+        }
+
         // All vehicles with manufacturer info
         public IEnumerable<VehicleWithManufacturer> GetAllVehWithManufacturer()
         {
@@ -46,6 +72,16 @@ namespace AssociationsIntro.Controllers
             var fetchedObjects = ds.Vehicles.Include("Manufacturer").OrderBy(veh => veh.Model);
 
             return Mapper.Map<IEnumerable<VehicleWithManufacturer>>(fetchedObjects);
+        }
+
+        // One vehicle
+        public VehicleBase GetOneVehicleById(int id)
+        {
+            // Note that we must .Include("Manufacturer") to fetch the associated object
+            // so that the mapping operation can write the ManufacturerId property
+            var fetchedObject = ds.Vehicles.Include("Manufacturer").SingleOrDefault(i => i.Id == id);
+
+            return (fetchedObject == null) ? null : Mapper.Map<VehicleBase>(fetchedObject);
         }
 
         // One vehicle with its manufacturer info
