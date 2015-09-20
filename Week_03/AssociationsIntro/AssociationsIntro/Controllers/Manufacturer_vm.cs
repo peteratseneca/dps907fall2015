@@ -26,7 +26,7 @@ namespace AssociationsIntro.Controllers
 
     public class ManufacturerWithVehicles : ManufacturerBase
     {
-        public ICollection<VehicleBase> Vehicles { get; set; }
+        public IEnumerable<VehicleBase> Vehicles { get; set; }
     }
 
     public class ManufacturerEdit
