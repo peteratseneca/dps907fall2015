@@ -17,9 +17,9 @@ Adds support for a "root" controller, which handles a request to "/api".
 
 **Web API project v1**
 
-This is a Visual Studio project template.  
-Save this file to the following folder:
+The zip file is a Visual Studio project template.  
+Save this file to the following folder:  
 %userprofile%\Documents\Visual Studio 2015\Templates\ProjectTemplates\Visual C#\Web  
 -or-  
 %userprofile%\Documents\Visual Studio 2013\Templates\ProjectTemplates\Visual C#\Web  
-(You must create the "Web" folder)  
+(You must create the "Web" folder. Do not unzip the file.)  
