@@ -2,7 +2,7 @@
 
 **Code examples**
 
-Organized by week. Each "week" page has a read me file that describes the example.  
+Organized by week. Each "week" folder/page has a "read me" file that describes the example.  
 
 You can browse the code online. 
 
@@ -12,8 +12,8 @@ You can also pull the repository to your own computer (clone or download).
 
 Download to a folder. Unzip.  
 
-Notice the "packages" folder in the 'root'. Also notice that each code example folder does NOT include a "packages" folder.  Why? To reduce the download size. 
+Notice that each code example folder does NOT include a "packages" folder. Why? To reduce the download size.  
 
-Before opening a code example, copy the "packages" folder into its folder.  
+Before running a code example, do a build/compile. That will fetch the packages needed by the project.  
 
-*Problems?* Please contact your professor for help. 
+*Problems?* Please contact your professor for help.  
