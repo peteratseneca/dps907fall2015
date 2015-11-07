@@ -12,3 +12,10 @@ Build and run.
 Request the resource /generatemachinekey  
 Copy-then-paste the result to the "system.web" section of BOTH the Identity Server project, AND your Lab 7 project.  
 This work will enable the projects to work when deployed to Azure.  
+
+**LocalSecurity**
+
+Builds upon ProjectWithSecurity above.  
+Look at the "Attention" comments by using Task List in Visual Studio.  
+Adds claims processing as a feature.  
+Includes a Test controller, enabling you to test authentication, view claims, and test role claims.  
