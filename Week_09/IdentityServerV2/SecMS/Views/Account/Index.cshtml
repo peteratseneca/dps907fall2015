@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <strong>User names:</strong>
+    @Html.Raw(ViewBag.UserNames)
+</p>
+<p>
+    <strong>Claims, not formatted:</strong><br />
+    @Html.Raw(ViewBag.Status)</p>
+<p>@Html.ActionLink("Go to a nicely-formatted view", "Details")</p>

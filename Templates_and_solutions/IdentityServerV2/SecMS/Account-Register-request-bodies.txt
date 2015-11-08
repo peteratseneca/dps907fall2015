@@ -1,0 +1,23 @@
+﻿
+You can use the following to help with the account registration task.
+
+
+Method:	POST
+URI:	/api/account/register
+
+
+Make sure you set the request content type to:
+==============================================
+
+Content-Type: application/x-www-form-urlencoded
+
+
+
+Example request entity bodies:
+==============================
+
+Email=admin@example.com&Password=Password123!&ConfirmPassword=Password123!&GivenName=Administrator&Surname=Administrator&Roles=Admin
+
+Surname=Eight&Password=Password123!&ConfirmPassword=Password123!&GivenName=Student&Roles=Student&Roles=Mentor&Email=student8@example.com
+
+Password=Password123!&ConfirmPassword=Password123!&GivenName=Student&Surname=Five&Roles=Student&Email=student5@example.com
