@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Lab6.Controllers.InstrumentAdd">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAIAAAAAABAAQAAAAAAACAA=</HashCode>
+      <FileName>Controllers\Instrument_vm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.Controllers.InstrumentAddTemplate">
+    <Position X="0.5" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAIAAAAAABAAQAAAAAAACAA=</HashCode>
+      <FileName>Controllers\Instrument_vm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.Controllers.InstrumentBase">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Instrument_vm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.Controllers.InstrumentWithMediaInfo">
+    <Position X="5.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAgAABAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Instrument_vm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.Controllers.InstrumentWithMedia">
+    <Position X="5.25" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Instrument_vm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.Controllers.InstrumentWithLink">
+    <Position X="8" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Controllers\Instrument_vm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.Controllers.InstrumentLinked">
+    <Position X="8" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Instrument_vm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab6.Controllers.InstrumentsLinked">
+    <Position X="8" Y="6.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\Instrument_vm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
