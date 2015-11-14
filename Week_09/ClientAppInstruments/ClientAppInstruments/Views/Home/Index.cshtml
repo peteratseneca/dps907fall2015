@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Client app for Instruments</h1>
+    <p class="lead">This client app works with the Instruments web service, by using HttpClient objects.</p>
+    <p><a href="http://petermcintyre.com/dps907/notes/nov12" class="btn btn-primary btn-lg" target="_blank">More info &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>This app was created with the ASP.NET MVC web app template (v4.5). No security components are included.</p>
+        <p>It uses the Instruments web service as its data store.</p>
+        <p>The Instruments web service is configured with security. It understands how to use OAuth bearer tokens. It relies on the Identity Server app to issue tokens to users.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Things to look for</h2>
+        <p>The <b>Manager</b> class knows how to work with the web service.</p>
+        <p>It creates HttpClient objects, and sends requests to web service URIs. The responses are materialized into the data objects and collections that the controllers expect.</p>
+        <p>The controller classes are essentially unchanged. Their methods still call methods in the manager class.</p>
+    </div>
+    <div class="col-md-4">
+        <h2>Configuration how-to</h2>
+        <p>Here's how to use this app:</p>
+        <ol>
+            <li>Load/run the Identity Server app.</li>
+            <li>Load/run the Instruments web service.</li>
+            <li>Load/run this app.</li>
+        </ol>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+﻿@model ClientAppInstruments.Controllers.InstrumentEditPhoto
+
+@{
+    ViewBag.Title = "Edit Photo";
+}
+
+<h2>Edit photo</h2>
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Choose a new photo, and click the Save button</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <!-- Descriptive info about the item to be edited -->
+        <div class="form-group">
+            @Html.Label("Description", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input name="Description" class="form-control" readonly value="@Model.Description" />
+            </div>
+        </div>
+
+        <!-- Input element for the file upload -->
+
+        <div class="form-group">
+            @Html.Label("Photo", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="PhotoUpload" class="form-control" accept="image/*" onchange="previewImage(event)" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Existing or proposed photo", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @if (Model.MediaSize > 0)
+                {
+
+                    <img src='@("/instruments/details/" + Model.Id + "/photo")' alt="" id="instrumentImage" class="img-thumbnail" width="280" />
+                }
+                else
+                {
+                    <img src='~/Content/one-pixel-square-translucent.png' alt="" id="instrumentImage" class="img-thumbnail" width="280" />
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

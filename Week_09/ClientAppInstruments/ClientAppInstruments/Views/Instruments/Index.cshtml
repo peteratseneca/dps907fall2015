@@ -1,0 +1,84 @@
+﻿@model IEnumerable<ClientAppInstruments.Controllers.InstrumentWithLink>
+
+@{
+    ViewBag.Title = "List of Instruments";
+}
+
+<h2>List of Instruments</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ManufacturerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InstrumentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModelCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MSRP)
+        </th>
+        <th>
+            Photo
+        </th>
+        <th>
+            Sound clip
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManufacturerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstrumentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MSRP)
+            </td>
+            <td>
+                @if (item.PhotoMediaLength > 0)
+                {
+                    <img src='@("/instruments/details/" + item.Id + "/photo")' alt="" class="img-thumbnail" width="100" />
+                }
+                else
+                {
+                    <span>(none)</span>
+                }
+            </td>
+            <td>
+                @if (item.SoundClipMediaLength > 0)
+                {
+                    <audio controls="controls" src='@("/instruments/details/" + item.Id + "/soundclip")' />
+                }
+                else
+                {
+                    <span>(none)</span>
+                }
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.Id }) |*@
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) @*|
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })*@
+            </td>
+        </tr>
+    }
+
+</table>

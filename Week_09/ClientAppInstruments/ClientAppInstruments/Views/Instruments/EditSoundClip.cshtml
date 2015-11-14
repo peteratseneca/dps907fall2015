@@ -1,0 +1,65 @@
+﻿@model ClientAppInstruments.Controllers.InstrumentEditSoundClip
+
+@{
+    ViewBag.Title = "Edit Sound Clip";
+}
+
+<h2>Edit sound clip</h2>
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Choose a new sound clip, and click the Save button</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <!-- Descriptive info about the item to be edited -->
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input name="Description" class="form-control" readonly value="@Model.Description" />
+            </div>
+        </div>
+
+        <!-- Input element for the file upload -->
+
+        <div class="form-group">
+            @Html.Label("Sound clip", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="SoundClipUpload" class="form-control" accept="audio/*" onchange="previewAudio(event)" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Existing or proposed sound clip", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @if (Model.MediaSize > 0)
+                {
+                    <audio controls="controls" src='@("/instruments/details/" + Model.Id + "/soundclip")' id="instrumentAudio" />
+                }
+                else
+                {
+                    <audio controls="controls" src='~/Content/silent-one-second.mp3' id="instrumentAudio" />
+                }
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
