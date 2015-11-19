@@ -1,0 +1,6 @@
+﻿
+Client ID
+258706366899-this-part-replaced-with-blahblah.apps.googleusercontent.com
+
+Client secret
+24-hex-characters-string

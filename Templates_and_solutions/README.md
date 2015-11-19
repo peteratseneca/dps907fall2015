@@ -10,6 +10,11 @@ Includes topics up to and including Week 6 (repo pattern, link relations, handle
 Based on the "Web API project v1" project template.  
 Includes Week 7 topics (media handling).  
 
+**Web API project v3**
+
+Updated project template.  
+Includes security-aware features covered in Weeks 8 and 9.  
+
 **IdentityServerV1**
 
 Used in Week 8.  

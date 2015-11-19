@@ -18,3 +18,8 @@ Designed to interact with a web service - SolutionForLab7.
 How? The URI of the web service is programmed into a "factory" method in the Manager class.  
 
 The three apps above must be used together, and loaded/run in the sequence listed above.  
+
+**Web API project v3**
+
+Updated project template.  
+Includes security-aware features.  
